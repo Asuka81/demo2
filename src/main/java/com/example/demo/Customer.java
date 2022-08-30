@@ -18,11 +18,36 @@ public class Customer {
     }
 
     public Customer(String ID, String n, boolean s, int a){
+
         this.ID = ID;
         this.name = n;
         this.sex = s;
+        if (a < 0){
+            a = 0;
+        }
         this.age = a;
     }
+
+    public Customer(String ID, String n, String s, int a){
+
+        boolean sex = false;
+        if (s.equals("male")){
+            sex = true;
+        }
+        else{
+            sex = false;
+        }
+        this.ID = ID;
+        this.name = n;
+        this.sex = sex;
+        if (a < 0){
+            a = 0;
+        }
+        this.age = a;
+    }
+
+
+
 
 
     public String getID() {
